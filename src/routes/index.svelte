@@ -1,50 +1,38 @@
-<script>
-	import successkid from 'images/successkid.jpg';
+<script context="module" lang="ts">
+	export async function preload() {
+		return this.fetch(`/recent_transactions.json`)
+    .then((r: { json: () => any; }) => {
+      return r.json();
+    })
+    .then((recent_transactions: any) => {
+			return { recent_transactions };
+		});
+	}
+</script>
+
+<script lang="ts">
+	import Recent from '../components/Recent.svelte';
+	export let recent_transactions: any;
+
 </script>
 
 <style>
-	h1, figure, p {
+	h5 {
 		text-align: center;
 		margin: 0 auto;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
 	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
+		h5 {
+			font-size: 2em;
 		}
 	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Pay Feed</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h5>Pay Feed</h5>
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<Recent {recent_transactions}/>
