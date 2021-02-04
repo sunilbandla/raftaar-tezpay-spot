@@ -4,22 +4,19 @@
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	.tip-container {
+		text-align: right;
+    font-family: Roboto;
+    font-size: 16px;
+    padding: 10px;
 	}
-  h5, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 480px) {
-		h5 {
-			font-size: 2em;
-		}
-	}
+  .order-body {
+    padding: 10px;
+  }
 </style>
-<div>
-      including INR {order.tipAmount}
-      for {order.payeeMerchantType} at {order.payeeMerchantName}
+<div class="order-body">
+    {order.payerName} sent &#8377;{order.amount} to {order.payeeName}
+</div>
+<div class="tip-container">
+  &#8377;{order.tipAmount} to {order.payeeMerchantName}
 </div>
