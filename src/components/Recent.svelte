@@ -21,5 +21,4 @@
 	}
 </style>
 
-<h1>Recent transactions</h1>
 <Orders {recent_transactions}/>

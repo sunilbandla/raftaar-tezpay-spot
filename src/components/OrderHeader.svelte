@@ -5,7 +5,8 @@
 
 <style>
   .order-header {
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     text-align: center;
   }
 </style>

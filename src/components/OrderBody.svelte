@@ -6,8 +6,6 @@
 <style>
 	.tip-container {
 		text-align: right;
-    font-family: Roboto;
-    font-size: 16px;
     padding: 10px;
 	}
   .order-body {
