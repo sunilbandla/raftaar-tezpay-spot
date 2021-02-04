@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	export async function preload() {
-		return this.fetch(`/recent_transactions.json`)
+		return this.fetch(`recent_transactions.json`)
     .then((r: { json: () => any; }) => {
       return r.json();
     })
