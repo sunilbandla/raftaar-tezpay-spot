@@ -34,7 +34,7 @@
     text-align: center;
   }
   .order-image {
-    background-color: rgb(55, 110, 228);
+    background-color: #1A73E8;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 20%);
     color: white;
     border-radius: 50%;
@@ -47,7 +47,7 @@
     display: flex;
   }
   .order {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #D93025;
     display: flex;
     flex-direction: row;
   }
