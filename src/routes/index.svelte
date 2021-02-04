@@ -33,6 +33,6 @@
 	<title>Tez Feed</title>
 </svelte:head>
 
-<h5>Pay Feed</h5>
+<h5>Tez Feed</h5>
 
 <Recent {recent_transactions}/>
