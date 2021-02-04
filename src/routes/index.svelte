@@ -30,7 +30,7 @@
 </style>
 
 <svelte:head>
-	<title>Pay Feed</title>
+	<title>Tez Feed</title>
 </svelte:head>
 
 <h5>Pay Feed</h5>
