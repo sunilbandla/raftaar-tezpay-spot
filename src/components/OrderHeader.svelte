@@ -1,16 +1,24 @@
 
 <script lang="ts">
+  import {formatAmount} from '../services/formatters';
 	export let order: any;
 </script>
 
 <style>
   .order-header {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;;
+  }
+  .amount {
+    text-align: right;
+    float: right;
   }
 </style>
 
 <div class="order-header">
-  {order.orderType} + {order.payeeMerchantType}
+  {order.payerName} paid {order.payeeName}
+  <span class="amount">
+    &#8377;{formatAmount(order.amount)}
+  </span>
 </div>
