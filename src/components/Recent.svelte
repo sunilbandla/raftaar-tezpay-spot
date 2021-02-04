@@ -1,5 +1,6 @@
 
 <script lang="ts">
+	import Orders from './Orders.svelte';
 	export let recent_transactions: any;
 </script>
 
@@ -21,14 +22,4 @@
 </style>
 
 <h1>Recent transactions</h1>
-
-<ul>
-	{#each recent_transactions.transactions as transaction}
-		<li>
-      INR {transaction.amount}
-      from {transaction.payerName} to {transaction.payeeName}
-      including INR {transaction.tipAmount}
-      for {transaction.payeeMerchantType} at {transaction.payeeMerchantName}
-    </li>
-	{/each}
-</ul>
+<Orders {recent_transactions}/>
