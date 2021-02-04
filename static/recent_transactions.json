@@ -10,14 +10,15 @@
       "payeeMerchantName": "Covid Relief",
       "id": 1,
       "privacyType": "PUBLIC",
-      "description": "Ramanan just won Google Pay Reward",
+      "description": "Ramanan just won Google Pay Reward.",
+      "iconUrl": "https://fonts.gstatic.com/s/i/productlogos/pay_2020q4/v3/192px.svg",
       "completionTimeFormatted": "1m",
       "completionTimeMs": 1612433309912
     },
     {
       "id": 2,
-      "privacyType": "PUBLIC",
-      "description": "Shengda reached their INR 5,000 donation to Doctors without Borders",
+      "privacyType": "FRIENDS",
+      "description": "Shengda reached their INR 5,000 donation to Doctors without Borders.",
       "completionTimeFormatted": "18m",
       "payerName": "Shengda",
       "payeeName": "Monu",
@@ -45,7 +46,7 @@
     },
     {
       "id": 4,
-      "privacyType": "FRIENDS",
+      "privacyType": "PUBLIC",
       "description": "Monu just rounded their payment to pay INR 38 to Fight Against COVID fund.",
       "completionTimeFormatted": "2h",
       "payerName": "Monu",
@@ -71,6 +72,20 @@
       "payeeMerchantType": "Donation",
       "payeeMerchantName": "Elections Fund",
       "completionTimeMs": 1611433209212
+    },
+    {
+      "id": 6,
+      "privacyType": "PUBLIC",
+      "description": "Shengda just rounded their payment to pay INR 25 to Climate fund.",
+      "completionTimeFormatted": "12h",
+      "payerName": "Shengda",
+      "payeeName": "Ajay",
+      "amount": 328,
+      "orderType": "P2P",
+      "tipAmount": 25,
+      "payeeMerchantType": "Donation",
+      "payeeMerchantName": "Fight Against Climate",
+      "completionTimeMs": 1601033109212
     }
   ]
 }
