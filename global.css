@@ -2,6 +2,10 @@ body {
   max-width: 350px;
   margin: 50px auto;
   font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400px;
+  font-stretch: 100%;
+  color: rgba(0,0,0,.87);
 }
 
 @media (min-width: 400px) {
