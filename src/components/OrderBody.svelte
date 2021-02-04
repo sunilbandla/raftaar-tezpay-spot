@@ -1,27 +1,48 @@
 
 <script lang="ts">
-  import {formatAmount} from '../services/formatters';
 	export let order: any;
-  function formatTimestamp() {
-    const date = new Date(order.completionTimeMs);
-    return `${date.toLocaleTimeString()} - ${date.toLocaleDateString()}`;
+  function getRandom(): number {
+    return Math.round(Math.random() * 10) + 1;
   }
 </script>
 
 <style>
-	.tip-container {
-		text-align: center;
-    padding: 10px;
+	.comment {
+		text-align: left;
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
 	}
-  .event-time {
-    padding: 10px;
-    text-align: left;
+  .actions {
+    padding: 0 0 5px 0;
+    text-align: right;
+	}
+ .icon {
+    margin: 0 10px 0 0;
+    display: inline-block;
+  }
+  .material-icons {
+    vertical-align: bottom;
+    font-size: 16px;
+  }
+  .comments {
+    color: #1A73E8;
+  }
+  .favorites {
+    color: #EA4335;
   }
 </style>
-
-<div class="tip-container">
-  &#8377;{formatAmount(order.tipAmount)} {order.payeeMerchantType} to {order.payeeMerchantName}
+    {#if !!order.comment}
+<div class="comment">
+  {order.comment}
 </div>
-<div class="event-time">
-  {formatTimestamp()}
+{/if}
+<div class="actions">
+  <div class="icon">
+    <span class="material-icons favorites">favorite</span>
+      {getRandom()}
+  </div>
+  <div class="icon">
+    <span class="material-icons comments">comment</span>
+      {getRandom()}
+  </div>
 </div>
