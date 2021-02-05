@@ -1,22 +1,41 @@
-
 <script lang="ts">
-	export let order: any;
+  export let order: any;
   function getRandom(): number {
     return Math.round(Math.random() * 10) + 1;
   }
 </script>
 
+{#if !!order.comment}
+  <div class="comment">
+    {@html order.comment}
+  </div>
+{/if}
+<div class="actions">
+  <div class="icon">
+    <span class="material-icons favorites">favorite</span>
+    {#if order.id !== 1}
+      {getRandom()}
+    {/if}
+  </div>
+  <div class="icon">
+    <span class="material-icons comments">comment</span>
+    {#if order.id !== 1}
+      {getRandom()}
+    {/if}
+  </div>
+</div>
+
 <style>
-	.comment {
-		text-align: left;
+  .comment {
+    text-align: left;
     padding: 10px 10px 10px 0;
     font-size: 14px;
-	}
+  }
   .actions {
     padding: 0 0 5px 0;
     text-align: right;
-	}
- .icon {
+  }
+  .icon {
     margin: 0 10px 0 0;
     display: inline-block;
   }
@@ -25,24 +44,9 @@
     font-size: 16px;
   }
   .comments {
-    color: #1A73E8;
+    color: #1a73e8;
   }
   .favorites {
-    color: #EA4335;
+    color: #ea4335;
   }
 </style>
-    {#if !!order.comment}
-<div class="comment">
-  {@html order.comment}
-</div>
-{/if}
-<div class="actions">
-  <div class="icon">
-    <span class="material-icons favorites">favorite</span>
-      {getRandom()}
-  </div>
-  <div class="icon">
-    <span class="material-icons comments">comment</span>
-      {getRandom()}
-  </div>
-</div>
