@@ -33,7 +33,7 @@
 </style>
     {#if !!order.comment}
 <div class="comment">
-  {order.comment}
+  {@html order.comment}
 </div>
 {/if}
 <div class="actions">
