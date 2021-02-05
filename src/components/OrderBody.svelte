@@ -13,13 +13,13 @@
 <div class="actions">
   <div class="icon">
     <span class="material-icons favorites">favorite</span>
-    {#if order.id !== 1}
+    {#if order.id > 2}
       {getRandom()}
     {/if}
   </div>
   <div class="icon">
     <span class="material-icons comments">comment</span>
-    {#if order.id !== 1}
+    {#if order.id > 2}
       {getRandom()}
     {/if}
   </div>
