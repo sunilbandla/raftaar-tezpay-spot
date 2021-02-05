@@ -9,7 +9,7 @@
       "payeeMerchantType": "Reward",
       "payeeMerchantName": "Covid Relief",
       "id": 1,
-      "privacyType": "PUBLIC",
+      "privacyType": "FRIENDS",
       "description": "Shengda just won Google Pay Reward.",
       "iconUrl": "https://fonts.gstatic.com/s/i/productlogos/pay_2020q4/v3/192px.svg",
       "completionTimeFormatted": "1m",
@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "privacyType": "FRIENDS",
+      "privacyType": "PUBLIC",
       "description": "Ramanan reached their INR 5,000 donation to Doctors without Borders.",
       "completionTimeFormatted": "2m",
       "payerName": "Ramanan",
