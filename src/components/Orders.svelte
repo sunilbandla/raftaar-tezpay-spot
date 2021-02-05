@@ -2,6 +2,17 @@
   import OrderHeader from './OrderHeader.svelte';
   import OrderBody from './OrderBody.svelte';
   export let recent_transactions: any;
+  const firstCharToColor = {
+    'A': '#185ABC',
+    'S': '#B31412',
+    'R': '#EA8600',
+    'M': '#137333',
+    'B': '#FDD663',
+    'G': '#1A73E8',
+  };
+  function getBgColor(name: string): string {
+    return firstCharToColor[name.charAt(0)];
+  }
 </script>
 
 <div class="orders-list">
@@ -11,7 +22,8 @@
         {#if !!order.iconUrl}
           <img src={order.iconUrl} alt={order.payerName} />
         {:else}
-          <div class="order-image">
+          <div class="order-image"
+            style="background-color: {getBgColor(order.payerName)}">
             <div class="order-image-content">
               {order.payerName.charAt(0)}
             </div>

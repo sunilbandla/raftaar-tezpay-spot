@@ -1,7 +1,8 @@
 
 <script lang="ts">
   import {formatAmount} from '../services/formatters';
-	export let order: any;
+		import { fade, fly } from 'svelte/transition';
+export let order: any;
   const privacyTypeToIcon = {
     PUBLIC: 'group',
     FRIENDS: 'lock',
@@ -36,7 +37,7 @@
 
 <div class="order-header">
   {order.description}
-  <span class="amount">
+  <span class="amount" in:fly="{{ y: 200, duration: 2000 }}">
     {#if order.orderType === 'REWARD'}
       + &#8377;{formatAmount(order.amount)}
     {/if}
