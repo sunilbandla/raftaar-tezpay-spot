@@ -1,16 +1,56 @@
-
 <script lang="ts">
-  import {formatAmount} from '../services/formatters';
-		import { fade, fly } from 'svelte/transition';
-export let order: any;
+  import { formatAmount } from '../services/formatters';
+  import { fade, fly } from 'svelte/transition';
+  import { beforeUpdate } from 'svelte';
+  import { afterUpdate } from 'svelte';
+  import { onMount } from 'svelte';
+  import { scale } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
+  export let order: any;
+  let originalOrder = null;
+  onMount(() => {
+    originalOrder = order;
+    order = {
+      ...originalOrder,
+      orderType: undefined,
+    };
+    if (originalOrder.orderType === 'REWARD') {
+      setTimeout(() => {
+        order = originalOrder;
+      }, 400);
+    }
+  });
   const privacyTypeToIcon = {
     PUBLIC: 'group',
     FRIENDS: 'lock',
-  }
+  };
   function getPrivacyIcon(order: any) {
     return privacyTypeToIcon[order.privacyType] || 'public';
   }
 </script>
+
+<div class="order-header">
+  {order.description}
+  {#if order.orderType === 'REWARD'}
+    <span
+      class="amount"
+      transition:scale={{
+        duration: 200,
+        delay: 100,
+        opacity: 0.5,
+        start: 0.5,
+        easing: quintOut,
+      }}
+    >
+      + &#8377;{formatAmount(order.amount)}
+    </span>
+  {/if}
+</div>
+<div class="event-time">
+  {order.completionTimeFormatted}
+  -
+  <span class="material-icons">{getPrivacyIcon(order)}</span>
+</div>
 
 <style>
   .order-header {
@@ -21,7 +61,7 @@ export let order: any;
   .amount {
     text-align: right;
     float: right;
-    color: #1E8E3E;
+    color: #1e8e3e;
   }
   .event-time {
     padding: 5px 10px 10px 0;
@@ -32,19 +72,4 @@ export let order: any;
     vertical-align: bottom;
     font-size: 16px;
   }
-
 </style>
-
-<div class="order-header">
-  {order.description}
-  <span class="amount" in:fly="{{ y: 200, duration: 2000 }}">
-    {#if order.orderType === 'REWARD'}
-      + &#8377;{formatAmount(order.amount)}
-    {/if}
-  </span>
-</div>
-<div class="event-time">
-  {order.completionTimeFormatted}
-  -
-  <span class="material-icons">{getPrivacyIcon(order)}</span>
-</div>

@@ -1,8 +1,8 @@
 {
   "transactions": [
     {
-      "payerName": "Ramanan",
-      "payeeName": "Shengda",
+      "payerName": "Shengda",
+      "payeeName": "Ramanan",
       "amount": 121,
       "orderType": "REWARD",
       "tipAmount": 5,
@@ -10,7 +10,7 @@
       "payeeMerchantName": "Covid Relief",
       "id": 1,
       "privacyType": "PUBLIC",
-      "description": "Ramanan just won Google Pay Reward.",
+      "description": "Shengda just won Google Pay Reward.",
       "iconUrl": "https://fonts.gstatic.com/s/i/productlogos/pay_2020q4/v3/192px.svg",
       "completionTimeFormatted": "1m",
       "completionTimeMs": 1612433309912
@@ -18,9 +18,9 @@
     {
       "id": 2,
       "privacyType": "FRIENDS",
-      "description": "Shengda reached their INR 5,000 donation to Doctors without Borders.",
+      "description": "Ramanan reached their INR 5,000 donation to Doctors without Borders.",
       "completionTimeFormatted": "2m",
-      "payerName": "Shengda",
+      "payerName": "Ramanan",
       "payeeName": "Monu",
       "amount": 195,
       "orderType": "P2P",
