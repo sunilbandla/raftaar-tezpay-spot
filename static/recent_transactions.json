@@ -1,6 +1,20 @@
 {
   "transactions": [
     {
+      "id": 1,
+      "privacyType": "PUBLIC",
+      "description": "Shengda just rounded their payment to pay INR 3 to GiveIndia fund.",
+      "completionTimeFormatted": "5s",
+      "payerName": "Shengda",
+      "payeeName": "Ajay",
+      "amount": 200,
+      "orderType": "P2P",
+      "tipAmount": 3,
+      "payeeMerchantType": "Donation",
+      "payeeMerchantName": "GiveIndia",
+      "completionTimeMs": 1612433309992
+    },
+    {
       "payerName": "Shengda",
       "payeeName": "Ramanan",
       "amount": 121,
@@ -8,7 +22,7 @@
       "tipAmount": 5,
       "payeeMerchantType": "Reward",
       "payeeMerchantName": "Covid Relief",
-      "id": 1,
+      "id": 2,
       "privacyType": "FRIENDS",
       "description": "Shengda just won Google Pay Reward.",
       "iconUrl": "https://fonts.gstatic.com/s/i/productlogos/pay_2020q4/v3/192px.svg",
@@ -16,10 +30,10 @@
       "completionTimeMs": 1612433309912
     },
     {
-      "id": 2,
+      "id": 3,
       "privacyType": "PUBLIC",
       "description": "Ramanan reached their INR 5,000 donation to Doctors without Borders.",
-      "completionTimeFormatted": "2m",
+      "completionTimeFormatted": "10m",
       "payerName": "Ramanan",
       "payeeName": "Monu",
       "amount": 195,
@@ -30,7 +44,7 @@
       "completionTimeMs": 1612413309152
     },
     {
-      "id": 3,
+      "id": 4,
       "privacyType": "PUBLIC",
       "description": "Gaurav got 50% off Myntra coupon as reward.",
       "comment": "Time for some back to work shopping! &#x1F6CD &#x1F609",
@@ -42,20 +56,6 @@
       "tipAmount": 1785,
       "payeeMerchantType": "Donation",
       "payeeMerchantName": "Elections Fund",
-      "completionTimeMs": 1611433209212
-    },
-    {
-      "id": 4,
-      "privacyType": "PUBLIC",
-      "description": "Monu just rounded their payment to pay INR 38 to Fight Against COVID fund.",
-      "completionTimeFormatted": "2h",
-      "payerName": "Monu",
-      "payeeName": "Ajay",
-      "amount": 18215,
-      "orderType": "P2P",
-      "tipAmount": 1785,
-      "payeeMerchantType": "Donation",
-      "payeeMerchantName": "Fight Against COVID",
       "completionTimeMs": 1611433209212
     },
     {
@@ -76,9 +76,9 @@
     {
       "id": 6,
       "privacyType": "PUBLIC",
-      "description": "Shengda just rounded their payment to pay INR 25 to Climate fund.",
+      "description": "Monu just rounded their payment to pay INR 25 to Climate fund.",
       "completionTimeFormatted": "12h",
-      "payerName": "Shengda",
+      "payerName": "Monu",
       "payeeName": "Ajay",
       "amount": 328,
       "orderType": "P2P",
