@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-  <title>Tez Feed</title>
+  <title>Recent Activity</title>
 </svelte:head>
 
 <div class="title">
